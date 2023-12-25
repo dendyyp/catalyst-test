@@ -67,5 +67,5 @@ And(/^User validate transaction amount as "([^"]*)"$/) do |amount|
   xpath = "//div[contains(text(),'#{expected_amount}')]"
   actual_amount = find(:xpath, xpath, wait: 10).text
   expect(actual_amount).to eq(expected_amount)
-  sleep 10
+  sleep 5
 end
