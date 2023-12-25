@@ -1,4 +1,4 @@
-@create-trx
+@create-transaction
 Feature: Buy products in Jamtangan.com
 
 Scenario: User buy products using Virtual Account
