@@ -29,7 +29,7 @@ gem 'webdrivers'
 4. To run all scenario can using this command:
 >$ cucumber
 5. To run specific/several scenario can using run with tags like this:
->$ bundle exec cucumber -t @login
+>$ bundle exec cucumber -t @create-trx
 
 ### Run script in Local
 
