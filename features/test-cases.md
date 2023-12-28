@@ -8,7 +8,7 @@ Feature: User Login in Jamtangan.com
 
     Scenario: Successful login with valid credentials
     
-        Given user is on the login page
+        Given user is on Jamtangan.com login page
 
         When user enters valid username "john_doe"
         
@@ -22,7 +22,7 @@ Feature: User Login in Jamtangan.com
 
     Scenario: Successful login with Google account
         
-        Given user is on the login page
+        Given user is on Jamtangan.com login page
 
         When user clicks on the Google button
         
@@ -38,7 +38,7 @@ Feature: User Login in Jamtangan.com
     
     Scenario: Successful login with phone number and sent otp to Whatsapp
         
-        Given user is on the login page
+        Given user is on Jamtangan.com login page
 
         When user enters valid phone number "081381818181"
         
@@ -60,7 +60,7 @@ Feature: User Login in Jamtangan.com
 
     Scenario: Successful login with phone number and sent otp to SMS
         
-        Given user is on the login page
+        Given user is on Jamtangan.com login page
 
         When user enters valid phone number "081381818181"
         
@@ -98,13 +98,79 @@ Feature: User Login in Jamtangan.com
 <br>
 Feature: Error handling in Jamtangan.com login page
 
-    Scenario: Login with invalid email and Password
+    Scenario: Login with invalid email and password
     
-    Given the user is on the login page
+        Given the user is on Jamtangan.com login page
     
-    When the user enters an invalid username and password
+        When user enters an invalid username
+        
+        And user enters an invalid password
     
-    And clicks the login button
+        And clicks the login button
 
-    Then the user should see an error message indicating invalid credentials
+        Then user should see an error message "Ups, email atau password kamu salah"
+
+        And user failed to login
+
+    Scenario: Login with empty password
+        
+        Given the user is on Jamtangan.com login page
+        
+        When user input email
+
+        And user not input password
+        
+        Then Masuk button is disabled
+
+        And user button cannot be clicked
+    
+    Scenario: Login with invalid email format
+        
+        Given the user is on Jamtangan.com login page
+        
+        When user input email with invalid format "testing123"
+        
+        Then error message contains "Hmm, format email salah" displayed
+        
+        And Masuk button is disabled
+    
+    Scenario: Login with invalid phone number format
+        
+        Given the user is on Jamtangan.com login page
+        
+        When user input phone number with invalid format "981271"
+        
+        Then error message contains "Hmm, format nomor HP mu salah" displayed
+        
+        And Masuk button is disabled
+
+    Scenario: Login with invalid OTP
+        
+        Given the user is on Jamtangan.com login page
+        
+        When user input valid phone number
+
+        And input invalid otp "111111"
+        
+        Then error message contains "Ups, kode verifikasi kamu salah" displayed
+        
+        And Verifikasi Kode button is disabled
+    
+    Scenario: Login attempt when disconnected
+    
+        Given user is on Jamtangan.com login page
+
+        When user enters valid email
+        
+        And user enters valid password
+
+        And user clicks Masuk button
+
+        And user device is disconnected from the internet
+
+        Then user should see an error message indicating a network connectivity issue
+
+        And user failed to login
+
+        And user should remain on the login page
 </details>
