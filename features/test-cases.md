@@ -271,7 +271,7 @@ Feature: User Login in Jamtangan.com
 <details>
 <summary>Accounts Feature</summary>
 <br>
-Feature: 
+Feature: User Account Configuration
 
     Scenario: User update Name in Data Diri account page
     
