@@ -6,7 +6,7 @@
 <br>
 Feature: User Login in Jamtangan.com
 
-Scenario: Successful login with valid credentials
+    Scenario: Successful login with valid credentials
     
     Given the user is on the login page
 
@@ -15,7 +15,7 @@ Scenario: Successful login with valid credentials
     And the user clicks the login button
 
     Then the user should be redirected to the dashboard
-    
+
     And the user should see a welcome message
 </details>
 
