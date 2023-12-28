@@ -273,7 +273,7 @@ Feature: User Login in Jamtangan.com
 <br>
 Feature: 
 
-    Scenario: User update Name in account page
+    Scenario: User update Name in Data Diri account page
     
         Given user is on Data Diri page
 
@@ -291,7 +291,7 @@ Feature:
 
         And names have been updated
 
-    Scenario: User add date of birth in account page
+    Scenario: User add date of birth in Data Diri account page
 
         Given user is on Data Diri page
 
@@ -305,4 +305,31 @@ Feature:
 
         Then user successfully add date of birth
 
-        And date of birth should be displayed on Tanggal Lahir field
+        And date of birth should be displayed on Tanggal Lahir
+
+    Scenario: User add gender in Data Diri account page
+
+        Given user is on Data Diri page
+
+        When user clicks Tambah on Jenis Kelamin
+
+        And user should see Tambah Jenis Kelamin modal
+
+        And user choose gender in dropdown
+
+        And user click Simpan button 
+
+        Then user successfully add gender
+
+        And message "Jenis Kelamin sukses diubah" appear
+    
+    Scenario: User add phone number in Data Diri account page
+
+    Scenario: User add address in Daftar Alamat account page
+
+    Scenario: User change existing address in Daftar Alamat account page
+
+    Scenario: User delete existing address in Daftar Alamat account page
+
+    Scenario: User change password in address list account page
+
