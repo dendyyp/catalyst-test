@@ -1,5 +1,14 @@
 Feature: User Account Configuration
 
+# Happy Flow
+Scenario: User add profile picture
+    Given user logged in Jamtangan.com
+    And user is in account page
+    When user click on profile image
+    And user choose valid image
+    Then message "Foto profilmu berhasil diubah"
+    And profile picture should be updated with the uploaded image
+
 Scenario: User update Name in Data Diri account page    
     Given user logged in Jamtangan.com 
     And user is on Data Diri page
@@ -7,8 +16,8 @@ Scenario: User update Name in Data Diri account page
     And user should see Ubah Nama modal
     And user change name
     And user click Simpan button 
-    Then user successfully changes name
-    And message "Nama sukses diubah" appear
+    Then message "Nama sukses diubah" appear
+    And user successfully changes name
     And names have been updated
 
 Scenario: User add date of birth in Data Diri account page
@@ -71,6 +80,26 @@ Scenario: User delete existing address in Daftar Alamat account page
     Then message "Alamat sukses dihapus" appear
     And deleted address should no longer be visible in the address list
 
+Scenario: User sets an existing address as the main address
+    Given user logged in Jamtangan.com
+    And user is on Daftar Alamat page
+    And user has multiple addresses in address list
+    When user click Jadikan Alamat Utama on existing address
+    Then message "Alamat utama sukses dipilih" appear
+    And selected address should be marked as the main address in the address list
+    And previous main address should revert to a regular address
+
+Scenario: User cancels the address change in Daftar Alamat account page
+    Given user logged in Jamtangan.com
+    And user is on Daftar Alamat page
+    When user click Ubah on choosen address
+    And user decides to cancel the changes
+    And user clicks on the close icon
+    And validation popup is shown
+    And user click Hapus button
+    Then the Daftar Alamat account page should not display any success message
+    And the address details should remain unchanged in the address list
+
 Scenario: User change password in address list account page
     Given user logged in Jamtangan.com
     And user is on Daftar Ubah Password page
@@ -82,6 +111,31 @@ Scenario: User change password in address list account page
     And user should be logged in with the new password
 
 # Negative Test
+
+Scenario: User upload profile picture image exceeding maximum file size
+    Given user logged in Jamtangan.com
+    And user is in account page
+    When user click on profile image
+    And user choose image size exceed maximum file size
+    Then user should see error message contains "Ukuran gambar terlalu besar" appear
+    And profile picture should remain unchanged 
+
+Scenario: User upload profile picture with invalid image format
+    Given user logged in Jamtangan.com
+    And user is in account page
+    When user click on profile image
+    And user choose invalid image format
+    Then user shold see error message "Format gambar harus jpeg atau png" appear
+    And profile picture should remain unchanged
+
+Scenario: User upload profile picture with unstable connection
+    Given user logged in Jamtangan.com
+    And user is in account page
+    And connection is unstable
+    When user click on profile image
+    And user choose image
+    Then user shold see error message contains "Terjadi kesalahan saat mengupload gambar" appear
+    And profile picture should remain unchanged 
 
 Scenario: User update Name in Data Diri account page with invalid format
     Given user logged in Jamtangan.com 
@@ -100,6 +154,22 @@ Scenario: User add address with empty required field
     Then user should see validation message contains "Harus diisi" on required text field
     And Simpan button is disabled
 
+Scenario: User input phone number more than maximum allowed number in Tambah Alamat
+    Given user logged in Jamtangan.com
+    And user has existing address in address list
+    And user is on Tambah Alamat
+    When user input phone number more than maximum
+    Then validation message contains "No. handphone penerima terlalu panjang. Maximal 15 angka" appear
+    And Simpan button is disabled
+
+Scenario: User input postal code more than maximum allowed number in Tambah Alamat
+    Given user logged in Jamtangan.com
+    And user has existing address in address list
+    And user is on Tambah Alamat
+    When user input postal code more than maximum
+    Then validation message contains "Kode pos terlalu panjang. Maximal 5 angka" appear
+    And Simpan button is disabled 
+
 Scenario: User add phone number with invalid format
     Given user logged in Jamtangan.com 
     And user is on Data Diri page
@@ -112,6 +182,12 @@ Scenario: User add phone number with invalid format
 Scenario: User add date of birth when no internet connection
     Given user logged in Jamtangan.com 
     And user is on Data Diri page
+    When user clicks Tambah on Tanggal Lahir
+    And user should see Tambah Tanggal Lahir modal
+    And user choose date using date picker
+    And user click Simpan button
+    And the connection is lost during the process
+    Then user failed to saved date of birth
 
 Scenario: Changing Password with Mismatched New Password and Confirmation
     Given the user is on the account page
@@ -120,5 +196,3 @@ Scenario: Changing Password with Mismatched New Password and Confirmation
     And clicks the change password button
     Then the user should see an validation message "Ups, password yang diketik nggak sama" indicating password mismatch
     And Konfirmasi button disabled
-
-

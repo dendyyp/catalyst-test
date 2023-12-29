@@ -1,11 +1,11 @@
-Feature: User Login in Jamtangan.com
+Feature: Login in Jamtangan.com
 
 # Happy Flow Test Cases
 
 Scenario: Successful login with valid credentials    
     Given user is on Jamtangan.com login page
-    When user enters valid username "john_doe"
-    And user enters valid password "secret123"
+    When user enters valid username
+    And user enters valid password
     And user clicks the Masuk button
     Then user should be redirected to the Jamtangan.com homepage
     And user should see profile account on header
@@ -21,7 +21,7 @@ Scenario: Successful login with Google account
     
 Scenario: Successful login with phone number and sent otp to Whatsapp
     Given user is on Jamtangan.com login page
-    And user enters valid phone number "081381818181"
+    And user enters valid phone number
     And user clicks the Masuk button
     And user should see Verifikasi Data popup
     When user clicks Lebih Cepat Via Whatsapp button
@@ -33,7 +33,7 @@ Scenario: Successful login with phone number and sent otp to Whatsapp
 
 Scenario: Successful login with phone number and sent otp to SMS    
     Given user is on Jamtangan.com login page
-    And user enters valid phone number "081381818181"
+    And user enters valid phone number
     And user clicks the Masuk button
     And user should see Verifikasi Data popup
     When user clicks Kirim via SMS
@@ -51,8 +51,6 @@ Scenario: One user login from multiple browsers
     And user should see profile account on header in each session
 
 # Negative Test Cases
-
-Feature: Error handling in Jamtangan.com login page
 
 Scenario: Login with invalid email and password
     Given the user is on Jamtangan.com login page
