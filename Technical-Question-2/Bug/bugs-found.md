@@ -50,7 +50,7 @@ https://drive.google.com/file/d/1YVZet1BmbM4JgYJJpiv6LJ0qBg1EsYgY/view?usp=shari
 </details>
 
 <details open>
-<summary>2. Mismatch Product Price</summary>
+<summary>2. Issue in Product Price</summary>
 <br>
 <b>Bug Title:</b> [Bug] [Cart] [MWeb] Price List in Lainnya Section Mismatch with Product Price in Product Detail Page
 
