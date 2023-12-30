@@ -125,7 +125,7 @@ The popup should only close when the close button inside the popup is clicked.
 
 <br><b>Priority</b>
 
-Medium
+Low
 
 <br><b>Evidence</b>
 
