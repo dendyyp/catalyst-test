@@ -128,3 +128,12 @@ Scenario: User set invalid min max price range
     When user sets the minimum price to "5.000.000" and maximum price to "5.000"
     Then user should see an validation message "Lebih kecil dari harga min"
     And Terapkan button is disabled
+
+Scenario: User search product when connection unstable
+    Given user logged in Jamtangan.com
+    And user is in homepage
+    When user input valid keywords in the search bar
+    And user click on Search button
+    And the connection is lost during the process
+    Then show error message contains "Koneksinya putus" in search result
+    And user should see Coba Lagi button
