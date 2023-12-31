@@ -59,10 +59,10 @@ https://drive.google.com/file/d/1OtC2OmPrlHayW-BW1WZyKCajbcGUatN-/view?usp=shari
 - [Login](https://github.com/dendyyp/catalyst-test/blob/main/Technical-Question/Test-Cases/login-test-case-creation-manual.feature)
 - [Account](https://github.com/dendyyp/catalyst-test/blob/main/Technical-Question/Test-Cases/account-test-case-creation-manual.feature)
 - [Search](https://github.com/dendyyp/catalyst-test/blob/main/Technical-Question/Test-Cases/search-test-case-creation-manual.feature)  
-#### Suggest Features
-- [Link](https://github.com/dendyyp/catalyst-test/blob/main/Technical-Question/Suggest-Develop-Feature/Develop-Feature.md)
 #### Bug Found Report
 - [Report](https://github.com/dendyyp/catalyst-test/blob/main/Technical-Question/Bug/bugs-found.md)
+#### Suggest Features
+- [Link](https://github.com/dendyyp/catalyst-test/blob/main/Technical-Question/Suggest-Develop-Feature/Develop-Feature.md)
 
 ### General Questions
 - [Answer](https://github.com/dendyyp/catalyst-test/blob/main/General-Question/General-question-qa.md)
