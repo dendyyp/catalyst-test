@@ -1,9 +1,7 @@
 # Catalyst-Assessment-QA Engineer
 
 ## Table of Contents
-- [Catalyst-Assessment-QA Engineer](#catalyst-assessment-qa-engineer)
-  - [Table of Contents](#table-of-contents)
-    - [Prerequisite](#prerequisite)
+  - [Prerequisite](#prerequisite)
     - [How to run this automation scenarios in local](#how-to-run-this-automation-scenarios-in-local)
     - [Run script in Local](#run-script-in-local)
       - [Evidence](#evidence)
