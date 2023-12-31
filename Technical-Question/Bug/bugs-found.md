@@ -88,9 +88,9 @@ https://drive.google.com/file/d/1LqbmiqznllyiXx3IHNhJy47qODrPJCTY/view?usp=shari
 
 <br><b>Additional Notes</b>
 
-Browser: Safari
-Device: iPhone 12
-OS: iOS 17
+1. Browser: Safari
+2. Device: iPhone 12
+3. OS: iOS 17
 
 </details>
 
@@ -133,7 +133,7 @@ https://drive.google.com/file/d/1LxnjdGI6og0O7-mSrSmJlGZB2kmVK-0i/view?usp=shari
 
 <br><b>Additional Notes</b>
 
-Browser: Safari
-OS: MacOS Monterey
+1. Browser: Safari
+2. OS: MacOS Monterey
 
 </details>
