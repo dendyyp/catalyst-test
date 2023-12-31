@@ -7,7 +7,7 @@ My passion is committed to ensuring the delivery of high-quality products and se
 <details>
 <summary>2. Why do you want to be a QA Engineer?</summary>
 <br>
-I am drawn was drawn to the role of a QA Engineer because of my innate passion for ensuring software quality and reliability. I have the ability and feel comfortable in testing and analyzing applications, identifying potential issues, and collaborating with cross-functional teams to deliver products that user expectations.
+I was drawn to the role of a QA Engineer because of my innate passion for ensuring software quality and reliability. I have the ability and feel comfortable in testing and analyzing applications, identifying potential issues, and collaborating with cross-functional teams to deliver products that user expectations.
 </details>
 
 <details>
