@@ -1,7 +1,7 @@
 Feature: User Account Configuration
 
 # Happy Flow
-Scenario: User add profile picture
+Scenario: User add profile picture in Account page
     Given user logged in Jamtangan.com
     And user is in account page
     When user click on profile image
@@ -13,7 +13,7 @@ Scenario: User update Name in Data Diri account page
     Given user logged in Jamtangan.com 
     And user is on Data Diri page
     When user clicks Ubah on Nama
-    And user should see Ubah Nama modal
+    And user should see Ubah Nama popup
     And user change name
     And user click Simpan button 
     Then message "Nama sukses diubah" appear
@@ -24,7 +24,7 @@ Scenario: User add date of birth in Data Diri account page
     Given user logged in Jamtangan.com 
     And user is on Data Diri page
     When user clicks Tambah on Tanggal Lahir
-    And user should see Tambah Tanggal Lahir modal
+    And user should see Tambah Tanggal Lahir popup
     And user choose date using date picker
     And user click Simpan button 
     Then user successfully add date of birth
@@ -34,7 +34,7 @@ Scenario: User add gender in Data Diri account page
     Given user logged in Jamtangan.com 
     And user is on Data Diri page
     When user clicks Tambah on Jenis Kelamin
-    And user should see Tambah Jenis Kelamin modal
+    And user should see Tambah Jenis Kelamin popup
     And user choose gender in dropdown
     And user click Simpan button 
     Then user successfully add gender
@@ -44,7 +44,7 @@ Scenario: User add phone number in Data Diri account page
     Given user logged in Jamtangan.com 
     And user is on Data Diri page
     When user clicks Tambah on No Handphone
-    And user should see Tambah No.Handphone modal
+    And user should see Tambah No.Handphone popup
     And user input valid phone number
     And user click on Simpan button
     And user should see Verifikasi Data popup
@@ -141,7 +141,7 @@ Scenario: User update Name in Data Diri account page with invalid format
     Given user logged in Jamtangan.com 
     And user is on Data Diri page
     When user clicks Ubah on Nama
-    And user should see Ubah Nama modal
+    And user should see Ubah Nama popup
     And user change name with invalid format
     Then user should see validation message "Format masih salah" in text box
     And Simpan button is disabled
@@ -174,7 +174,7 @@ Scenario: User add phone number with invalid format
     Given user logged in Jamtangan.com 
     And user is on Data Diri page
     When user clicks Tambah on No Handphone
-    And user should see Tambah No.Handphone modal
+    And user should see Tambah No.Handphone popup
     And user input invalid phone number
     Then user should see validation message contains "Hmm, format nomor HP mu salah" in text box
     And Simpan button is disabled
@@ -183,7 +183,7 @@ Scenario: User add date of birth when no internet connection
     Given user logged in Jamtangan.com 
     And user is on Data Diri page
     When user clicks Tambah on Tanggal Lahir
-    And user should see Tambah Tanggal Lahir modal
+    And user should see Tambah Tanggal Lahir popup
     And user choose date using date picker
     And user click Simpan button
     And the connection is lost during the process
@@ -194,5 +194,5 @@ Scenario: Changing Password with Mismatched New Password and Confirmation
     When the user enters a new password
     And enters a confirmation password that does not match the new password
     And clicks the change password button
-    Then the user should see an validation message "Ups, password yang diketik nggak sama" indicating password mismatch
+    Then user should see an validation message "Ups, password yang diketik nggak sama" indicating password mismatch
     And Konfirmasi button disabled
