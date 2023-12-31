@@ -1,7 +1,7 @@
 <details>
 <summary>1. Can you tell us about your passion?</summary>
 <br>
-My passion is committed to ensuring the delivery of high-quality products and services in all aspects. I have attention to detail, so I can find bugs from various corner/edge cases and minimize bugs in production. Additionally, I possess proficiency in both soft skills and hard skills as a Test Engineer, enabling me to collaborate effectively with the product team to develop features with high quality and in accordance with the specified timeline.
+My passion is committed to ensuring the delivery of high-quality products and services in all aspects. Additionally, I possess proficiency in both soft skills and hard skills as a Test Engineer, enabling me to collaborate effectively with the product team to develop features with high quality and in accordance with the specified timeline.
 </details>
 
 <details>
