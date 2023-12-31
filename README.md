@@ -1,7 +1,7 @@
 # Catalyst-Assessment-QA Engineer
 
 ## Table of Contents
-[Prerequisite](Prerequisite)
+[Prerequisite](#Prerequisite)
 ### Prerequisite
 1. Ruby (Make sure you already installed ruby. To check installed ruby you can using this command `$rvm list`)
 2. Cucumber (Make sure you already installed cucumber. To check you can using this command `$cucumber --version`)
