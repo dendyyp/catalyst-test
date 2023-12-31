@@ -68,7 +68,7 @@ https://drive.google.com/file/d/1OtC2OmPrlHayW-BW1WZyKCajbcGUatN-/view?usp=shari
 - https://github.com/dendyyp/catalyst-test/blob/main/Technical-Question/Bug/bugs-found.md
 
 ### General Questions
-https://github.com/dendyyp/catalyst-test/blob/main/General-Question/General-question-qa.md
+- https://github.com/dendyyp/catalyst-test/blob/main/General-Question/General-question-qa.md
   
 
 
