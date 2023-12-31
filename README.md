@@ -2,16 +2,16 @@
 
 ## Table of Contents
   - [Prerequisite](#prerequisite)
-    - [How to run this automation scenarios in local](#how-to-run-this-automation-scenarios-in-local)
-    - [Run script in Local](#run-script-in-local)
+  - [How to run this automation scenarios in local](#how-to-run-this-automation-scenarios-in-local)
+  - [Run script in Local](#run-script-in-local)
       - [Evidence](#evidence)
-    - [Run Results](#run-results)
+  - [Run Results](#run-results)
       - [Create Transactions using Virtual Account as Payment Method in Jamtangan.com](#create-transactions-using-virtual-account-as-payment-method-in-jamtangancom)
-    - [Technical Questions](#technical-questions)
+  - [Technical Questions](#technical-questions)
       - [Test Cases Creation](#test-cases-creation)
       - [Suggest Features](#suggest-features)
       - [Bug Found Report](#bug-found-report)
-    - [General Questions](#general-questions)
+  - [General Questions](#general-questions)
 
 ### Prerequisite
 1. Ruby (Make sure you already installed ruby. To check installed ruby you can using this command `$rvm list`)
