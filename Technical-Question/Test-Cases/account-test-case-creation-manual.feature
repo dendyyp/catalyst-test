@@ -125,7 +125,7 @@ Scenario: User upload profile picture with invalid image format
     And user is in account page
     When user click on profile image
     And user choose invalid image format
-    Then user shold see error message "Format gambar harus jpeg atau png" appear
+    Then user should see error message "Format gambar harus jpeg atau png" appear
     And profile picture should remain unchanged
 
 Scenario: User upload profile picture with unstable connection
@@ -134,7 +134,7 @@ Scenario: User upload profile picture with unstable connection
     And connection is unstable
     When user click on profile image
     And user choose image
-    Then user shold see error message contains "Terjadi kesalahan saat mengupload gambar" appear
+    Then user should see error message contains "Terjadi kesalahan saat mengupload gambar" appear
     And profile picture should remain unchanged 
 
 Scenario: User update Name in Data Diri account page with invalid format
